@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="mb-3">
+    <label for="Name" class="form-label">nombre</label>
+    <input type="text" class="form-control" #name>
+  </div>
+  <div class="mb-3">
+    <label for="LastName" class="form-label">Apellidos</label>
+    <input type="text" class="form-control" #lastName>
+  </div>
+  <div class="mb-3">
+    <label for="Identification" class="form-label">identificacion</label>
+    <input type="number" class="form-control" #identification>
+  </div>
+  <div class="mb-3">
+    <label for="Email" class="form-label">Correo</label>
+    <input type="email" class="form-control" #email>
+  </div>
+  <div class="mb-3">
+    <label for="Address" class="form-label">Direccion</label>
+    <input type="text" class="form-control" #address>
+  </div>
+  <div class="mb-3">
+    <label for="Password" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" #password>
+  </div>
+  <div>
+    <button type="button" (click)="add(name.value, lastName.value, identification.value, email.value,  address.value, password.value)">agregar</button>
+  </div>
+</div>

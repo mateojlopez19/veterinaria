@@ -1,0 +1,31 @@
+<div>
+  <table class="table table-dark table-striped">
+    <thead class="text-black">
+      <th>nombre</th>
+      <th>apellido</th>
+      <th>identificacion</th>
+      <th>correo</th>
+      <th>direccion</th>
+      <th>contraseña</th>
+      <th>opciones</th>
+    </thead>
+    <tbody *ngIf="clients.length">
+      <tr *ngFor="let client of clients">
+        <td>{{client.name}}</td>
+        <td>{{client.lastName}}</td>
+        <td>{{client.identification}}</td>
+        <td>{{client.email}}</td>
+        <td>{{client.address}}</td>
+        <td>{{client.password}}</td>
+        <td>
+          <button class="btn btn-info" routerLink="/edit/{{client.clientId}}">Editar</button>
+          <button class="btn btn-danger" (click)="deleteClient(client.clientId)">Borrar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <button class="btn btn-info btn-warning" routerLink="/add">Agregar cliente</button>
+</div>
+
