@@ -23,7 +23,7 @@ export class EditClientComponent implements OnInit {
 
   update(name:string, lastName:string, identification:string, email:string,  address:string, password:string){
     this.clientService.update(this.clientId, this.client).subscribe((res) => {
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/list');
     })
   }
 

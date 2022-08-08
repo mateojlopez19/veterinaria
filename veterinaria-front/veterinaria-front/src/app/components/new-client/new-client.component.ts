@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../../services/client.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-client',
@@ -8,7 +9,7 @@ import { ClientService } from '../../services/client.service';
 })
 export class NewClientComponent implements OnInit {
 
-  constructor(private clientService: ClientService) { }
+  constructor(private clientService: ClientService, private router: Router) { }
 
   clients:any;
 
@@ -24,10 +25,11 @@ export class NewClientComponent implements OnInit {
       'address': address,
       'password': password,
     };
-    this.clientService.addClient(this.clients as  any).subscribe(client => {
-      this.clients = this.clients
+    this.clientService.addClient(this.clients as  any).subscribe(clients => {
+      this.clients = this.clients,
+      this.router.navigateByUrl('/list');
     })
-    console.log(this.clients)
+
   }
 
 }

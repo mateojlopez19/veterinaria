@@ -9,7 +9,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewClientComponent } from './components/new-client/new-client.component';
 import { EditClientComponent } from './components/edit-client/edit-client.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-/* import { NavbarComponent } from './components/navbar.component'; */
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 //
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ClientsComponent,
     NewClientComponent,
     EditClientComponent,
-    /* NavbarComponent, */
+    NavbarComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

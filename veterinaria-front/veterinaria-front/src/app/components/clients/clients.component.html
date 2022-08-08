@@ -1,31 +1,31 @@
-<div>
+<div class="container mt-5">
   <table class="table table-dark table-striped">
     <thead class="text-black">
-      <th>nombre</th>
-      <th>apellido</th>
-      <th>identificacion</th>
-      <th>correo</th>
-      <th>direccion</th>
-      <th>contraseña</th>
-      <th>opciones</th>
+      <th class="text-center">nombre</th>
+      <th class="text-center">apellido</th>
+      <th class="text-center">identificacion</th>
+      <th class="text-center">correo</th>
+      <th class="text-center">direccion</th>
+      <th class="text-center">contraseña</th>
+      <th class="text-center">opciones</th>
     </thead>
     <tbody *ngIf="clients.length">
       <tr *ngFor="let client of clients">
-        <td>{{client.name}}</td>
-        <td>{{client.lastName}}</td>
-        <td>{{client.identification}}</td>
-        <td>{{client.email}}</td>
-        <td>{{client.address}}</td>
-        <td>{{client.password}}</td>
-        <td>
-          <button class="btn btn-info" routerLink="/edit/{{client.clientId}}">Editar</button>
-          <button class="btn btn-danger" (click)="deleteClient(client.clientId)">Borrar</button>
+        <td class="text-center">{{client.name}}</td>
+        <td class="text-center">{{client.lastName}}</td>
+        <td class="text-center">{{client.identification}}</td>
+        <td class="text-center">{{client.email}}</td>
+        <td class="text-center">{{client.address}}</td>
+        <td class="text-center">{{client.password}}</td>
+        <td class="text-center">
+          <button class="btn btn-info mx-2" routerLink="/edit/{{client.clientId}}">Editar</button>
+          <button class="btn btn-danger mx-2" (click)="deleteClient(client.clientId)">Borrar</button>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
-<div class="text-center mt-2">
+<!-- <div class="text-center mt-2">
   <button class="btn btn-info btn-warning" routerLink="/add">Agregar cliente</button>
-</div>
+</div> -->
 
